@@ -15,14 +15,15 @@ def plot_physical_histograms(df, logcols):
         color = 'blue'
         ax = plt.subplot(4, 3, list(df.columns).index(col)+1)
         if col in logcols:
-            temp = df.loc[:,col].apply(lambda x: np.log(x+1)).fillna(value=0.)
+            temp = df.loc[:,col].apply(lambda x: np.log(x+1)).dropna()
             color = 'red'
-            print "log applied to:", col
+            label = col + ' --->warning! log scale!'
         else:
-            temp = df.loc[:,col].fillna(value=0.)
-        #df_p.hist(ax=ax, bins=25, xlabelsize=15, xrot=-45, ylabelsize=15, color=color)
-        ax.hist(temp, bins=25, color=color)
-        ax.set_title(col + "   warning! log scale!")
+            temp = df.loc[:,col].dropna()
+            label = col
+        ax.hist(temp, bins=35, color=color)
+        ax.set_title(label, fontsize=20)
+        
     plt.tight_layout()
     plt.show()
 
