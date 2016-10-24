@@ -8,12 +8,21 @@ def get_physical_columns(df):
                  'st_optmag', 'st_teff', 'st_mass', 'st_rad']
     return df[cols_phys]
 
-def plot_physical_histograms(df):
+def plot_physical_histograms(df, logcols):
+    df = df.copy()
     plt.figure(figsize=(20,20))
-    for i in range(12):
-        ax = plt.subplot(4,3,i+1)
-        df_p.hist(ax=ax, bins=25, xlabelsize=15, xrot=-45, ylabelsize=15)
-        ax.set_title(ax.get_title(), fontsize=50)
+    for col in df.columns:
+        color = 'blue'
+        ax = plt.subplot(4, 3, list(df.columns).index(col)+1)
+        if col in logcols:
+            temp = df.loc[:,col].apply(lambda x: np.log(x+1)).fillna(value=0.)
+            color = 'red'
+            print "log applied to:", col
+        else:
+            temp = df.loc[:,col].fillna(value=0.)
+        #df_p.hist(ax=ax, bins=25, xlabelsize=15, xrot=-45, ylabelsize=15, color=color)
+        ax.hist(temp, bins=25, color=color)
+        ax.set_title(col + "   warning! log scale!")
     plt.tight_layout()
     plt.show()
 
@@ -36,11 +45,11 @@ def plot_XYZ_histograms(df):
 if __name__ == '__main__':
     # Extract columns
     df = pd.read_csv('../data/planets.csv')
-    '''df_p = get_physical_columns(df)
+    df_p = get_physical_columns(df)
     logcols = ['pl_bmassj', 'pl_dens', 'pl_orbper', 'pl_orbsmax',
                'pl_radj', 'st_dist', 'st_rad', 'st_teff']
-    plot_physical_histograms(df_p)'''
+    plot_physical_histograms(df_p, logcols)
 
     # Convert from polar to XYZ
-    df_c = convert_to_polar(df)
-    plot_XYZ_histograms(df_c)
+    '''df_c = convert_to_polar(df)
+    plot_XYZ_histograms(df_c)'''
