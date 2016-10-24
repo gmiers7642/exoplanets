@@ -23,8 +23,19 @@ def plot_physical_histograms(df, logcols):
             label = col
         ax.hist(temp, bins=35, color=color)
         ax.set_title(label, fontsize=20)
-        
+
     plt.tight_layout()
+    plt.show()
+
+def physical_scatterplot(df, logcols):
+    import seaborn as sns
+    sns.set()
+    df = df.copy()
+    plt.figure(figsize=(12,12))
+    for col in df.columns:
+        if col in logcols:
+            df.loc[:,col] = df.loc[:,col].apply(lambda x: np.log(x+1)).dropna()
+    sns.pairplot(data=df.fillna(value=0))
     plt.show()
 
 def convert_to_polar(df):
@@ -49,8 +60,11 @@ if __name__ == '__main__':
     df_p = get_physical_columns(df)
     logcols = ['pl_bmassj', 'pl_dens', 'pl_orbper', 'pl_orbsmax',
                'pl_radj', 'st_dist', 'st_rad', 'st_teff']
-    plot_physical_histograms(df_p, logcols)
+    #plot_physical_histograms(df_p, logcols)
 
     # Convert from polar to XYZ
     '''df_c = convert_to_polar(df)
     plot_XYZ_histograms(df_c)'''
+
+    # Scatterplot matrix for physical data
+    physical_scatterplot(df_p, logcols)
