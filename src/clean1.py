@@ -81,6 +81,35 @@ def create_random_mask(df, num):
     mask = np.random.choice(range(df.shape[0]), size=num, replace=False)
     return df.iloc[mask,:]
 
+def plot_3D_planets(coords, dfi, sizecol, colorcol, logcols):
+    df = dfi.copy()
+    for col in df.columns:
+        if col in logcols:
+            df.loc[:,col] = df.loc[:,col].apply(lambda x: np.log(x+1))
+    trace1 = Scatter3d(
+        x=coords['X'],
+        y=coords['Y'],
+        z=coords['Z'],
+        #text=df[textcol],
+        mode='markers',
+        marker=dict(
+            sizemode='diameter',
+            #sizeref=750,
+            size=df[sizecol],
+            color = df[colorcol],
+            colorscale = 'Viridis',
+            colorbar = dict(title = 'Planet<br>Properties'),
+            line=dict(color='rgb(140, 140, 170)')
+        )
+    )
+
+    theTitle = "3D planet plot of X,Y,Z vs." + sizecol + " as size, and " + colorcol + " as color"
+
+    data=[trace1]
+    layout=dict(height=800, width=800, title=theTitle)
+    fig=dict(data=data, layout=layout)
+    py.iplot(fig, filename='3DBubble')
+
 ################################################################################
 # Unit tests
 ################################################################################
@@ -131,6 +160,7 @@ def unit003():
     cph2 = cols_phys[11:]
     physical_scatterplot(df_p, cph1, cph2, logcols)
 
+# unit004 - For testing testing histogramming
 def unit004():
     df = pd.read_csv('../data/planets.csv')
 
@@ -148,8 +178,26 @@ def unit004():
                'pl_rvamp', 'st_plx', 'st_vsini', 'st_acts']
     plot_physical_histograms(df_p, logcols, 5, 5)
 
+def unit005():
+    df = pd.read_csv('../data/planets.csv')
+    cols_phys = ['pl_orbper', 'pl_orbsmax', 'pl_orbeccen', 'pl_orbincl',
+                 'pl_bmassj', 'pl_radj', 'pl_dens', 'st_dist',
+                 'st_optmag', 'st_teff', 'st_mass', 'st_rad',
+                 'st_logg', 'st_dens', 'st_lum', 'pl_rvamp',
+                 'pl_eqt', 'st_plx', 'st_age', 'st_vsini',
+                 'st_acts']
+    df_p = get_physical_columns(df, cols_phys)
+    logcols = ['pl_bmassj', 'pl_dens', 'pl_orbper', 'pl_orbsmax',
+               'pl_radj', 'st_dist', 'st_rad', 'st_teff', 'st_dens',
+               'pl_rvamp', 'st_plx', 'st_vsini', 'st_acts']
+    coords = convert_to_polar(df)
+    plot_3D_planets(create_random_mask(coords, 200),
+                    create_random_mask(df_p, 200),
+                    'pl_orbper', 'st_teff', logcols)
+
 if __name__ == '__main__':
     #unit001()
     #unit002()
     #unit003()
-    unit004()
+    #unit004()
+    unit005()
