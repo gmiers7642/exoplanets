@@ -23,15 +23,20 @@ def plot_physical_histograms(df, logcols, num_rows, num_cols):
     plt.tight_layout()
     plt.show()
 
-def physical_scatterplot(df, logcols):
-    import seaborn as sns
-    sns.set()
-    df = df.copy()
-    plt.figure(figsize=(12,12))
+def physical_scatterplot(df, hcols, vcols, logcols):
+    fig = plt.figure(figsize=(20,20))
+    total_plots = len(hcols) * len(vcols)
     for col in df.columns:
         if col in logcols:
-            df.loc[:,col] = df.loc[:,col].apply(lambda x: np.log(x+1)).fillna(value=0.)
-    sns.pairplot(data=df)
+            df.loc[:,col] = df.loc[:,col].apply(lambda x: np.log(x+1))
+    i = 1
+    for hcol in hcols:
+        for vcol in vcols:
+            ax = plt.subplot(len(hcols), len(vcols), i)
+            ax.scatter(df[hcol], df[vcol])
+            ax.set_title('(' + hcol + "," + vcol + ')')
+            i += 1
+    plt.tight_layout()
     plt.show()
 
 def convert_to_polar(df):
@@ -72,4 +77,6 @@ if __name__ == '__main__':
     plot_XYZ_histograms(df_c)'''
 
     # Scatterplot matrix for physical data
-    physical_scatterplot(df_p, logcols)
+    cph1 = cols_phys[0:10]
+    cph2 = cols_phys[11:]
+    physical_scatterplot(df_p, cph1, cph2, logcols)
