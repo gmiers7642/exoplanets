@@ -32,12 +32,19 @@ def create_correlation_matrix(df):
     return np.corrcoef(df)
 
 def get_nan_pct(df):
-    pcts = [sum(np.isnan(df[col]) ) / float(df.shape[0]) for col in df.columns]
+    pcts = [1.0 - sum(np.isnan(df[col]) ) / float(df.shape[0]) for col in df.columns]
     df_miss = pd.DataFrame({
                        'Attribute': df.columns,
                        'Percent_missing': pcts
                         })
-    return df_miss.sort_values(by='Percent_missing', ascending=False)
+    return df_miss.sort_values(by='Percent_missing', ascending=True)
+
+def add_multiplanet_column(df):
+    temp = df.groupby('pl_hostname', as_index=False)['rowid'].count()
+    temp.columns = [['pl_hostname', 'Multiple']]
+    df = df.merge(temp, on='pl_hostname', how='inner')
+    df.rename(columns={'Multiple_y':'Multiple'}, inplace=True)
+    return df
 
 ################################################################################
 # Plotting Functions
@@ -249,6 +256,7 @@ def unit006():
 
     plot_physical_kdes(df_p, logcols, 5, 5, 0.15)
 
+# unit007 - For testing calculation of fraction of missing values
 def unit007():
         df = pd.read_csv('../data/planets.csv')
 
@@ -263,15 +271,37 @@ def unit007():
         print "Missing column information:"
         print df_miss.head()
 
+# unit008 - For testing the additon of multi-planet flag 'Multiple'
+def unit008():
+    df = pd.read_csv('../data/planets.csv')
+    df = add_multiplanet_column(df)
+    print "DataFrame with multi-planet column added:"
+    print df[['pl_hostname', 'Multiple']].head(13)
 ################################################################################
 # Main
 ################################################################################
 
 if __name__ == '__main__':
+    # For testing physical data import
     #unit001()
+
+    # For testing polar to rectangular conversion
     #unit002()
+
+    # For testing the scatterplot
     #unit003()
+
+    # For testing testing histogramming
     #unit004()
+
+    # For testing 3D plotting
     #unit005()
+
+    # For testing kde plots
     #unit006()
-    unit007()
+
+    # For testing calculation of fraction of missing values
+    #unit007()
+
+    # For testing the additon of multi-planet flag 'Multiple'
+    unit008()
