@@ -28,6 +28,17 @@ def convert_to_polar(df):
     df_c['Z'] = df_c['st_dist'] * np.sin(df_c['dec'])
     return df_c
 
+def create_correlation_matrix(df):
+    return np.corrcoef(df)
+
+def get_nan_pct(df):
+    pcts = [sum(np.isnan(df[col]) ) / float(df.shape[0]) for col in df.columns]
+    df_miss = pd.DataFrame({
+                       'Attribute': df.columns,
+                       'Percent_missing': pcts
+                        })
+    return df_miss.sort_values(by='Percent_missing', ascending=False)
+
 ################################################################################
 # Plotting Functions
 ################################################################################
@@ -69,11 +80,11 @@ def plot_physical_kdes(dfi, logcols, num_rows, num_cols, bandwidth):
         support = np.linspace(np.min(temp), np.max(temp), 300)
         ax.plot(support, kde(support), color=color)
         ax.fill_between(support, kde(support), alpha=0.2, color=color)
-        ax.set_title(label, fontsize=10)
+        ax.set_title(label, fontsize=15)
     plt.tight_layout()
     plt.show()
 
-def physical_scatterplot(df, hcols, vcols, logcols):
+def physical_scatterplot(df, hcols, vcols, logcols, alpha=1.0):
     fig = plt.figure(figsize=(20,20))
     total_plots = len(hcols) * len(vcols)
     for col in df.columns:
@@ -83,7 +94,7 @@ def physical_scatterplot(df, hcols, vcols, logcols):
     for hcol in hcols:
         for vcol in vcols:
             ax = plt.subplot(len(hcols), len(vcols), i)
-            ax.scatter(df[hcol], df[vcol])
+            ax.scatter(df[hcol], df[vcol], alpha=alpha)
             ax.set_title('(' + hcol + "," + vcol + ')')
             i += 1
     plt.tight_layout()
@@ -238,6 +249,20 @@ def unit006():
 
     plot_physical_kdes(df_p, logcols, 5, 5, 0.15)
 
+def unit007():
+        df = pd.read_csv('../data/planets.csv')
+
+        cols_phys = ['pl_orbper', 'pl_orbsmax', 'pl_orbeccen', 'pl_orbincl',
+                     'pl_bmassj', 'pl_radj', 'pl_dens', 'st_dist',
+                     'st_optmag', 'st_teff', 'st_mass', 'st_rad',
+                     'st_logg', 'st_dens', 'st_lum', 'pl_rvamp',
+                     'pl_eqt', 'st_plx', 'st_age', 'st_vsini',
+                     'st_acts']
+        df_p = df[cols_phys]
+        df_miss = get_nan_pct(df_p)
+        print "Missing column information:"
+        print df_miss.head()
+
 ################################################################################
 # Main
 ################################################################################
@@ -248,4 +273,5 @@ if __name__ == '__main__':
     #unit003()
     #unit004()
     #unit005()
-    unit006()
+    #unit006()
+    unit007()
