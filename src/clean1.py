@@ -46,6 +46,18 @@ def add_multiplanet_column(df):
     df.rename(columns={'Multiple_y':'Multiple'}, inplace=True)
     return df
 
+def add_habitable_col(df, df_hc):
+    df_hc = df_hc.iloc[0:10,:]
+    print df_hc.shape
+    df_hc['Name'] = df_hc['Name'].apply(lambda x: x.strip('*'))
+    df_hc['letter'] = df_hc['Name'].apply(lambda x: x[-1])
+    col = np.zeros((df.shape[0], 1))
+    for i in range(df.shape[0]):
+        for j in range(df_hc.shape[0]):
+            if df.ix[i,'pl_hostname'] in df_hc.ix[j,'Name'] and df.ix[i,'pl_letter'] == df_hc.ix[j,'letter']:
+                col[i] = 1.0
+    return col
+
 ################################################################################
 # Plotting Functions
 ################################################################################
@@ -277,6 +289,21 @@ def unit008():
     df = add_multiplanet_column(df)
     print "DataFrame with multi-planet column added:"
     print df[['pl_hostname', 'Multiple']].head(13)
+
+# unit009 - For testing addition of habitable column 'Habitable_c'
+def unit009():
+    # Load data
+    df = import_data('../data/planets.csv')
+    df_hc = pd.read_csv('../data/Habitalbe_list_conservative.csv')
+
+    # Test the add_habitable_col() function
+    col = add_habitable_col(df, df_hc)
+    df['Habitable_c'] = col
+
+    # Print unique values, this should be 0.0 and 1.0
+    print "Unique values in Habitable_c column"
+    print df['Habitable_c'].value_counts()
+
 ################################################################################
 # Main
 ################################################################################
@@ -304,4 +331,7 @@ if __name__ == '__main__':
     #unit007()
 
     # For testing the additon of multi-planet flag 'Multiple'
-    unit008()
+    #unit008()
+
+    # For testing addition of habitable column 'Habitable_c'
+    unit009()
