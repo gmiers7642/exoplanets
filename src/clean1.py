@@ -103,7 +103,7 @@ def plot_physical_kdes(dfi, logcols, num_rows, num_cols, bandwidth):
     plt.tight_layout()
     plt.show()
 
-def physical_scatterplot(df, hcols, vcols, logcols, alpha=1.0):
+def physical_scatterplot(df, hcols, vcols, logcols, colors=['blue'], alpha=1.0):
     fig = plt.figure(figsize=(20,20))
     total_plots = len(hcols) * len(vcols)
     for col in df.columns:
@@ -113,7 +113,7 @@ def physical_scatterplot(df, hcols, vcols, logcols, alpha=1.0):
     for hcol in hcols:
         for vcol in vcols:
             ax = plt.subplot(len(hcols), len(vcols), i)
-            ax.scatter(df[hcol], df[vcol], alpha=alpha)
+            ax.scatter(df[hcol], df[vcol], alpha=alpha, c=colors)
             ax.set_title('(' + hcol + "," + vcol + ')')
             i += 1
     plt.tight_layout()
@@ -212,7 +212,7 @@ def unit003():
     # Scatterplot matrix for physical data, for one selected quadrant
     cph1 = cols_phys[0:10]
     cph2 = cols_phys[11:]
-    physical_scatterplot(df_p, cph1, cph2, logcols)
+    physical_scatterplot(df_p, cph1, cph2, logcols, alpha=0.2)
 
 # unit004 - For testing testing histogramming
 def unit004():
@@ -316,7 +316,7 @@ if __name__ == '__main__':
     #unit002()
 
     # For testing the scatterplot
-    #unit003()
+    unit003()
 
     # For testing testing histogramming
     #unit004()
@@ -334,4 +334,4 @@ if __name__ == '__main__':
     #unit008()
 
     # For testing addition of habitable column 'Habitable_c'
-    unit009()
+    #unit009()
