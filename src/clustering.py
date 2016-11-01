@@ -59,7 +59,7 @@ def kmeans_centroid_fill(df, n_clusters, max_iterations):
         X_hat[~valid] = clus.cluster_centers_[labels_hat][~valid]
 
     # Return the labels output by KMeans
-    return clus.labels_
+    return clus.labels_, Xm
 
 ################################################################################
 # Plotting Functions
@@ -102,7 +102,7 @@ def unit001():
                'pl_rvamp', 'st_plx', 'st_vsini', 'st_acts']
 
     print "Creating clusters"
-    labels = kmeans_centroid_fill(df_p, 3, 10)
+    labels, df_imputed = kmeans_centroid_fill(df_p, 3, 10)
 
     # Split columns into two groups
     cph1 = cols_phys[0:10]
@@ -148,7 +148,7 @@ def unit002():
 
 if __name__ == '__main__':
     # unit001 - To test Kmeans centroid clustering workflwo on full 21 features
-    #unit001()
+    unit001()
 
     # unit002 - To test Aglorrerative clustering workflwo on full 21 features (non-imputed data)
-    unit002()
+    #unit002()
