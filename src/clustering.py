@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from numpy.linalg import svd
 from sklearn.cluster import KMeans
+from sklearn.cluster import AgglomerativeClustering
 import matplotlib.pyplot as plt
 import clean1 as c
 
@@ -108,8 +109,46 @@ def unit001():
     cph2 = cols_phys[11:]
 
     print "Creating plots"
-    c.physical_scatterplot(df_p, cph1, cph2, logcols=df_p.columns, colors=labels, alpha=0.2)
+    c.physical_scatterplot(df_p, cph1, cph2, logcols=df_p.columns, \
+                           colors=labels, alpha=0.2)
+
+# To test Aglorrerative clustering workflwo on full 21 features (non-imputed data)
+def unit002():
+    print "Importing data"
+    df = c.import_data('../data/planets.csv')
+
+    # Extract columns
+    cols_phys = ['pl_orbper', 'pl_orbsmax', 'pl_orbeccen', 'pl_orbincl',
+                 'pl_bmassj', 'pl_radj', 'pl_dens', 'st_dist',
+                 'st_optmag', 'st_teff', 'st_mass', 'st_rad',
+                 'st_logg', 'st_dens', 'st_lum', 'pl_rvamp',
+                 'pl_eqt', 'st_plx', 'st_age', 'st_vsini',
+                 'st_acts']
+    df_p = c.get_physical_columns(df, cols_phys)
+
+    logcols = ['pl_bmassj', 'pl_dens', 'pl_orbper', 'pl_orbsmax',
+               'pl_radj', 'st_dist', 'st_rad', 'st_teff', 'st_dens',
+               'pl_rvamp', 'st_plx', 'st_vsini', 'st_acts']
+
+    # Pre-process the data, apply lof to all columns
+    df_p_log = log_all(df_p, df_p.columns)
+    df_p_avg = fill_avg(df_p_log)
+
+    # Actual agglomerative clustering
+    n_clusters = 3
+    ac = AgglomerativeClustering(n_clusters=n_clusters)
+    ac.fit(df_p_avg)
+
+    # Scatterplotting of agglomerative clusters
+    cph1 = cols_phys[0:10]
+    cph2 = cols_phys[11:]
+    ac_labels = ac.labels_
+    c.physical_scatterplot(df_p, cph1, cph2, logcols=df_p.columns, \
+                                colors=ac_labels, alpha=0.2)
 
 if __name__ == '__main__':
     # unit001 - To test Kmeans centroid clustering workflwo on full 21 features
-    unit001()
+    #unit001()
+
+    # unit002 - To test Aglorrerative clustering workflwo on full 21 features (non-imputed data)
+    unit002()
