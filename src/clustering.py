@@ -94,8 +94,7 @@ def plot_pc_features(vt, num, cols, title=""):
     plt.suptitle("Principal component plot for " + title)
     plt.show()
 
-def color_coded_pc_plot(df, labels, xlim=(-0.021, -0.01), ylim=(-0.07, 0.03)):
-    u,s,vt = svd(df)
+def color_coded_pc_plot(u, labels, xlim=(-0.021, -0.01), ylim=(-0.07, 0.03)):
     fig = plt.figure(figsize=(12,12))
     plt.scatter(u[:,0], u[:,1], c=labels, s=45, alpha=0.1)
     plt.xlim(xlim)
@@ -225,9 +224,44 @@ def unit004():
     ac, df_select = agg_clustering(df_imputed, cols, n_clusters)
     labels = ac.labels_
 
+    # Create svd
+    u,s,vt = svd(df_select)
+
     # Create the color codeded pc plot
     print "Creating pc plot..."
-    color_coded_pc_plot(df_select, labels)
+    color_coded_pc_plot(u, labels)
+
+# To test selection of most relevant features
+def unit005():
+    print "Importing data..."
+    df = c.import_data('../data/planets.csv')
+
+    # Extract columns
+    cols_phys = ['pl_orbper', 'pl_orbsmax', 'pl_orbeccen', 'pl_orbincl',
+                 'pl_bmassj', 'pl_radj', 'pl_dens', 'st_dist',
+                 'st_optmag', 'st_teff', 'st_mass', 'st_rad',
+                 'st_logg', 'st_dens', 'st_lum', 'pl_rvamp',
+                 'pl_eqt', 'st_plx', 'st_age', 'st_vsini',
+                 'st_acts']
+    df_p = c.get_physical_columns(df, cols_phys)
+
+    logcols = ['pl_bmassj', 'pl_dens', 'pl_orbper', 'pl_orbsmax',
+               'pl_radj', 'st_dist', 'st_rad', 'st_teff', 'st_dens',
+               'pl_rvamp', 'st_plx', 'st_vsini', 'st_acts']
+
+    # Pre-process the data, imputation, and create svd for plotting
+    print "Applying pre-processing..."
+    km_labels, df_imputed = kmeans_centroid_fill(df_p, 3, 10)
+
+    # Columns selected from previous analysi of 21 columns
+    print "Clustering..."
+    cols = ['st_age', 'pl_orbsmax', 'pl_bmassj', 'st_plx', 'st_dist', 'st_lum', 'st_mass']
+    n_clusters = 3
+    ac, df_select = agg_clustering(df_imputed, cols, n_clusters)
+    labels = ac.labels_
+
+    # Create svd
+    u,s,vt = svd(df_select)
 
 if __name__ == '__main__':
     # unit001 - To test Kmeans centroid clustering workflwo on full 21 features
