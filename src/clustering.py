@@ -67,6 +67,15 @@ def agg_clustering(df, cols, n_clusters):
     ac.fit(df_select)
     return ac, df_select
 
+def get_n_best(vti, n, labels):
+    vt = vti.copy()
+    output = []
+    for i in range(n):
+        output.append((labels[vt[:,i].argmax()], vt[:,i].max()))
+    output_df = pd.DataFrame(sorted(output, key=lambda x: x[1], reverse=True))
+    output_df.columns = ['features', 'relevance']
+    return output_df
+
 ################################################################################
 # Plotting Functions
 ################################################################################
@@ -88,11 +97,20 @@ def plot_pcs(A, rows, cols, T=False, colors=['blue']):
 def plot_pc_features(vt, num, cols, title=""):
     fig = plt.figure(figsize=(20,8))
     for i in range(num):
-        ax = plt.subplot(1,4,i+1)
+        ax = plt.subplot(1,num,i+1)
         ax.bar(left=np.arange(len(cols)), height=vt[:,i])
         ax.set_xticklabels(cols, rotation='vertical')
     plt.suptitle("Principal component plot for " + title)
     plt.show()
+
+'''def plot_pc_features(vt, num, cols, title=""):
+    fig = plt.figure(figsize=(20,8))
+    for i in range(num):
+        ax = plt.subplot(1, num, i+1)
+        ax.bar(left=np.arange(len(cols)), height=vt[:,i])
+        ax.set_xticklabels(cols, rotation='vertical')
+    plt.suptitle("Principal component plot for " + title)
+    plt.show()'''
 
 def color_coded_pc_plot(u, labels, xlim=(-0.021, -0.01), ylim=(-0.07, 0.03)):
     fig = plt.figure(figsize=(12,12))
@@ -253,15 +271,21 @@ def unit005():
     print "Applying pre-processing..."
     km_labels, df_imputed = kmeans_centroid_fill(df_p, 3, 10)
 
-    # Columns selected from previous analysi of 21 columns
-    print "Clustering..."
-    cols = ['st_age', 'pl_orbsmax', 'pl_bmassj', 'st_plx', 'st_dist', 'st_lum', 'st_mass']
-    n_clusters = 3
-    ac, df_select = agg_clustering(df_imputed, cols, n_clusters)
-    labels = ac.labels_
-
     # Create svd
-    u,s,vt = svd(df_select)
+    u,s,vt = svd(df_imputed)
+
+    # Select top 7 features, and plot some principal components
+    top7 = get_n_best(vt, 7, df_imputed.columns)
+
+    df_top_7 = df_imputed[top7['features'].values]
+    print top7['features'].values
+
+    # Create svd, again
+    u7,s7,vt7 = svd(df_top_7)
+
+    # Create plot of most important components
+    print "Creating feature plots"
+    plot_pc_features(vt7, 4, df_top_7.columns, "7 columns")
 
 if __name__ == '__main__':
     # unit001 - To test Kmeans centroid clustering workflwo on full 21 features
@@ -274,4 +298,7 @@ if __name__ == '__main__':
     #unit003()
 
     # unit004 - To test plotting of color coded pcs
-    unit004()
+    #unit004()
+
+    # unit005() - To test selection of most relevant features
+    unit005()
