@@ -83,3 +83,8 @@ if __name__ == '__main__':
     print "Data cleanup..."
     df_p_transit['label'] = labels_transit
     df_p_radialv['label'] = labels_radialv
+
+    ### Merge data frames back together and output them to disk
+    print "Exporting data..."
+    merged = df_p_transit.merge(df_p_radialv, how='outer')
+    merged.to_csv("../data/planets_physical_w_labels.csv", index=False)
