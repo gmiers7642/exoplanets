@@ -64,11 +64,6 @@ if __name__ == '__main__':
                                     n_clusters, linkage='average', affinity='cosine')
     labels_radialv = ac_radialv.labels_
 
-    ### Data cleanup and addition of ancillary information
-    print "Data cleanup..."
-    df_p_transit['label'] = labels_transit
-    df_p_radialv['label'] = labels_radialv
-
     ### Plot the data clusters for both the transit and radial velocity cases to make sure that everything went ok
     print "Creating plots..."
     fig = plt.figure(figsize=(20,8))
@@ -82,5 +77,9 @@ if __name__ == '__main__':
     ax2.set_title("Radial Velocity clusters")
     ax2.legend(labels_radialv)
     plt.suptitle("Cluster labeled scatterplots for transit and radial velocity discoveries")
-    #plt.show()
     plt.savefig("../data/QC001_Clusters_rad_and_trans.png")
+
+    ### Data cleanup and addition of ancillary information
+    print "Data cleanup..."
+    df_p_transit['label'] = labels_transit
+    df_p_radialv['label'] = labels_radialv
