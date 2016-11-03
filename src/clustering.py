@@ -61,11 +61,17 @@ def kmeans_centroid_fill(df, n_clusters, max_iterations):
     # Return the labels output by KMeans
     return clus.labels_, Xm
 
-def agg_clustering(df, cols, n_clusters):
+def agg_clustering(df, cols, n_clusters, linkage='ward', affinity='euclidean'):
+    df_select = df[cols]
+    ac = AgglomerativeClustering(n_clusters=n_clusters, linkage=linkage, affinity=affinity)
+    ac.fit(df_select)
+    return ac, df_select
+
+'''def agg_clustering(df, cols, n_clusters):
     df_select = df[cols]
     ac = AgglomerativeClustering(n_clusters=n_clusters)
     ac.fit(df_select)
-    return ac, df_select
+    return ac, df_select'''
 
 def get_n_best(vti, n, labels):
     vt = vti.copy()
