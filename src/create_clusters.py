@@ -82,4 +82,5 @@ if __name__ == '__main__':
     ax2.set_title("Radial Velocity clusters")
     ax2.legend(labels_radialv)
     plt.suptitle("Cluster labeled scatterplots for transit and radial velocity discoveries")
-    plt.show()
+    #plt.show()
+    plt.savefig("../data/QC001_Clusters_rad_and_trans.png")
