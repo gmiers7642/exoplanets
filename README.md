@@ -14,4 +14,5 @@
 * ScikitLearn Agglomerative clustering
 * Matplotlib for plotting and interpretation of data
 * Pandas and Numpy for quick and convenient data manipulation
+
 ![python logo](images/python-logo.png) ![skl_logo](images/skl_logo.png)
