@@ -21,3 +21,4 @@
 * Pandas and Numpy for quick and convenient data manipulation
 
 ![python logo](images/python-logo.png) ![skl_logo](images/skl_logo.png) ![pandas_logo](images/pandas_logo.png)
+![numpy_logo](images/numpy_logo.jpg) ![matplotlib_logo](images/matplotlib_logo.png)
