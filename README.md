@@ -5,6 +5,8 @@
 * There is a LOT of data available on exoplanets, for instance:
   * http://exoplanetarchive.ipac.caltech.edu/index.html
 
+![Exoplanet](images/opening-background.jpg)
+
 # What can we quickly discover about exoplanets using out-of-the box tools in Python?
 ## We will use:
 * ScikitLearn KMeans clustering
