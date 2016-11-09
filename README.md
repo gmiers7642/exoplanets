@@ -1,19 +1,24 @@
 # exoplanets
 
-## What are exoplanets?
+## Outline
+1.0) Unsupervised Learning
+2.0) What are exoplanets?
+3.0) Data wrangling and processing
+
+### What are exoplanets?
 * Exoplanets are planets that we have discovered outside of our solar system
 * There is a LOT of data available on exoplanets, for instance:
   * http://exoplanetarchive.ipac.caltech.edu/index.html
 
 ![Exoplanet](images/opening-background.jpg)
 
-# What can we quickly discover about exoplanets using out-of-the box tools in Python?
+### What can we quickly discover about exoplanets using out-of-the box tools in Python?
 * What are some common characteristics of exoplanets?
 * Where are they in relation to the Earth and Sun?
 * How similar are they to the Earth and Sun?
 * What are Habitable planets, and how do they compare to the Earth and Sun?
 
-## We will use:
+### We will use:
 * ScikitLearn KMeans clustering
 * Numpy Singular Value decomposition (SVD)
 * ScikitLearn Agglomerative clustering
