@@ -1,12 +1,12 @@
 #Exoplanets
 
 ##Outline
-1. [Unsupervised Learning](#1-Unsupervised Learning)
+1. [Unsupervised Learning](#Unsupervised Learning)
 2. What are exoplanets?
 3. [Data wrangling and processing](#Data Wrangling and Processing)
 4. [abcd](#abcd)
 
-1. ### Unsupervised Learning
+1. ### <a id="Unsupervised Learning">Unsupervised Learning</a>
 * Very powerful technique for exploratory data analysis (EDA)
 
 ###What are exoplanets?
