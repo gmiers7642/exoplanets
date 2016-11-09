@@ -1,9 +1,9 @@
 # exoplanets
 
 ## Outline
-1.0) Unsupervised Learning
-2.0) What are exoplanets?
-3.0) Data wrangling and processing
+1. Unsupervised Learning
+2. What are exoplanets?
+3. Data wrangling and processing
 
 ### What are exoplanets?
 * Exoplanets are planets that we have discovered outside of our solar system
