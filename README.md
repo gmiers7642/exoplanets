@@ -1,18 +1,25 @@
-# exoplanets
+#Exoplanets
 
-## Outline
-1. Unsupervised Learning
+##Outline
+1. [Unsupervised Learning](#1-Unsupervised Learning)
 2. What are exoplanets?
-3. Data wrangling and processing
+3. [Data wrangling and processing](#3-Data wrangling and processing)
 
-### What are exoplanets?
+###1-Unsupervised Learning
+* Very powerful technique for exploratory data analysis (EDA)
+
+###What are exoplanets?
 * Exoplanets are planets that we have discovered outside of our solar system
 * There is a LOT of data available on exoplanets, for instance:
   * http://exoplanetarchive.ipac.caltech.edu/index.html
 
-![Exoplanet](images/opening-background.jpg)
+ <a href="url"><img src="images/opening-background.jpg" align="left" height="100" width="125" ></a>
 
-### What can we quickly discover about exoplanets using out-of-the box tools in Python?
+![Exoplanet](images/opening-background.jpg =100x120)
+
+###3-Data wrangling and processing
+
+###What can we quickly discover about exoplanets using out-of-the box tools in Python?
 * What are some common characteristics of exoplanets?
 * Where are they in relation to the Earth and Sun?
 * How similar are they to the Earth and Sun?
