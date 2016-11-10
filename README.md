@@ -71,7 +71,7 @@ The main steps of this analysis are:
 7. Interpretation
 
 #### 4.1 <a id="#4_1 Data Downloading and Preparation">Data Downloading and Preparation</a>
-The data is available <a href="">here</a>.  <a href="https://github.com/gmiers7642/exoplanets/blob/master/src/prep_csv_data.bash">This script</a> can be used to prepare the data, make sure that it is in the 'data' directory.  This strips off all of the documentation columns, and prepares the data to be used by the other processing scripts.
+The data is available <a href="http://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets">here</a>.  <a href="https://github.com/gmiers7642/exoplanets/blob/master/src/prep_csv_data.bash">This script</a> can be used to prepare the data, make sure that it is in the 'data' directory.  This strips off all of the documentation columns, and prepares the data to be used by the other processing scripts.
 
 #### 4.2 <a id="#4_2 Imputation of Missing Data">Imputation of Missing Data</a>
 Method:
