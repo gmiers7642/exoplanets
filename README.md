@@ -109,6 +109,8 @@ The most relevant features are:
 <img src="images/g1g2.png" alt="alt text" align="bottom">
 
     * Group 3 is in many way a lot more interesting.  These are very large planets (some larger than Jupiter) that orbit very quickly around their stars.  They are so close in some cases that their atmospheres are being boiled off by their host stars.
+<img src="images/g3.png" alt="alt text" align="bottom">
+
     * The Earth is much smaller than most of the planets that we have discovered to date.  It also has a much larger orbit than many of the exoplanets.
 
 * Inherent biases in the data
