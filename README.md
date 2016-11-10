@@ -27,7 +27,7 @@
 
 <hr>
 
-### 2. <a id="2Exoplanets">What are exoplanets</a>
+### 2. <a id="2Exoplanets">What are Exoplanets?</a>
 * Exoplanets are planets that we have discovered outside of our solar system
 * There is a LOT of data available on exoplanets, for instance:
   * http://exoplanetarchive.ipac.caltech.edu/index.html
@@ -39,6 +39,16 @@
 <hr>
 
 ### 3. <a id="3Data Challenges">Data Challenges</a>
+* There are many features in the exoplanet data set
+    * Over 150 features in total
+        * These are physical measurements that have been made by astronomers using various
+    * 2/3 of these are error bars associated with the physical measurements contained in the data
+* Much missing data
+    * Imputation required
+* Data is large scale, so transformations are required
+    * For this analysis, logarithms were applied to all of the features
+        * This reveals far more structure in the data
+        * However, it can make interpretation more difficult
 
 <hr>
 
