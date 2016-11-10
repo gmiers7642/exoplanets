@@ -7,11 +7,13 @@ Code documentation can be found <a href="https://github.com/gmiers7642/exoplanet
 2. [Exoplanets](#2Exoplanets)
 3. [Data Challenges](#3Data Challenges)
 4. [Methodology](#4Methodology)
-    [4.1 Data Wrangling and Processing](#4_1 Data Wrangling and Processing)
-    [4.2 Data Imputation](#4_2 Data Imputation)
-    [4.3 Clustering](#4_3 Clustering)
-    [4.4 Dimensionality Reduction](#4_4 Dimensionality Reduction)
-    [4.5 Data Interpretation](#4_5 Data Interpretation)
+    * [4.1 Data Downloading and Preparation](#4_1 Data Downloading and Preparation)
+    * [4.2 Imputation of Missing Data](#4_2 Imputation of Missing Data)
+    * [4.3 Automatic Feature Selection](#4_3 Automatic Feature Selection)
+    * [4.4 Creation of Clusters](#4_4 Creation of Clusters)
+    * [4.5 Dimensionality Reduction](#4_5 Dimensionality Reduction)
+    * [4.6 Visualization](#4_6 Visualization)
+    * [4.7 Interpretation](#4_7 Interpretation)
 5. [Major Results and Interpretation](#5 Major Results and Interpretation)
 6. [Future work](#6Future work)
 7. [Tools Used](#7Tools Used)
@@ -43,7 +45,7 @@ Code documentation can be found <a href="https://github.com/gmiers7642/exoplanet
 ### 3. <a id="3Data Challenges">Data Challenges</a>
 * There are many features in the exoplanet data set
     * Over 150 features in total
-        * These are physical measurements that have been made by astronomers using various
+        * These are physical measurements that have been made by astronomers using various methods
     * 2/3 of these are error bars associated with the physical measurements contained in the data
 * Much missing data
     * Imputation required
@@ -59,6 +61,28 @@ Code documentation can be found <a href="https://github.com/gmiers7642/exoplanet
 <hr>
 
 ### 4. <a id="4Methodology">Methodology</a>
+The main steps of this analysis are:
+1. Data downloading and preparation
+2. Imputation of missing data
+3. Automatic feature selection
+4. Creation of clusters
+5. Dimensionality reduction
+6. Visualization
+7. Interpretation
+
+#### 4.1 <a id="#4_1 Data Downloading and Preparation">Data Downloading and Preparation</a>
+
+#### 4.2 <a id="#4_2 Imputation of Missing Data">Imputation of Missing Data</a>
+
+#### 4.3 <a id="#4_3 Automatic Feature Selection">Automatic Feature Selection</a>
+
+#### 4.4 <a id="#4_4 Creation of Clusters">Creation of Clusters</a>
+
+#### 4.5 <a id="#4_5 Dimensionality Reduction">Dimensionality Reduction</a>
+
+#### 4.6 <a id="#4_6 Visualization">Visualization</a>
+
+#### 4.7 <a id="#4_7 Interpretation">Interpretation</a>
 
 <hr>
 
