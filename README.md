@@ -69,8 +69,8 @@ Code documentation can be found <a href="https://github.com/gmiers7642/exoplanet
 ### 6. <a id="6Future work">Future work</a>
 * There is a lot more work to be done here.
     * There is a lot of interesting structure present in the data that is still left to be explored.  
-        * This is a plot of several features used here plotted as colors on a scatterplot of <> which shows three distinct clusters.
-        <img src="images/3_clusters.png" alt="alt text" align="middle">
+        * This is a plot of several features used here plotted as colors on a scatterplot of <> which shows three distinct clusters. <div>
+        <img src="images/3_clusters.png" alt="alt text" align="bottom">
         * These structures could easily be investigated using further cluster analysis.
     * Performing the same analysis with the planets discovered using radial velocity
 
