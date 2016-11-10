@@ -1,6 +1,10 @@
-#Exoplanets
+# Exoplanets
 
-##Outline
+ <a href="url"><img src="images/opening-background.jpg" align="left" height="100" width="125" ></a>
+
+=====================================
+
+## Outline
 1. [Unsupervised Learning](#Unsupervised Learning)
 2. [What are exoplanets?](#What are Exoplanets?)
 3. [Data Challenges](#Data Challenges)
@@ -14,7 +18,7 @@
 6. [Future work](#6Future work)
 7. [Tools Used](#7Tools Used)
 
-1. ### <a id="Unsupervised Learning">Unsupervised Learning</a>
+### 1. <a id="Unsupervised Learning">Unsupervised Learning</a>
 * Very powerful technique for exploratory data analysis (EDA)
 * There are many applications for unsupervised learning
     * Marketing
@@ -22,18 +26,18 @@
     * Politics
     * Many others
 
-2. ### <a href="What are Exoplanets?">What are exoplanets?</a>
+### 2. <a href="What are Exoplanets?">What are exoplanets?</a>
 * Exoplanets are planets that we have discovered outside of our solar system
 * There is a LOT of data available on exoplanets, for instance:
   * http://exoplanetarchive.ipac.caltech.edu/index.html
 
- <a href="url"><img src="images/opening-background.jpg" align="left" height="100" width="125" ></a>
+### 3. <a href="Data Challenges">Data Challenges</a>
 
 ![Exoplanet](images/opening-background.jpg =100x120)
 
-3. ### <a name="Methodology">Methodology</a>
+### 4. <a name="Methodology">Methodology</a>
 
-4. ### <a href="Data Challenges">Data Challenges</a>
+### 5. <a name="Methodology">Methodology</a>
 
 
 ###What can we quickly discover about exoplanets using out-of-the box tools in Python?
