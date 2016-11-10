@@ -2,14 +2,27 @@
 
 ##Outline
 1. [Unsupervised Learning](#Unsupervised Learning)
-2. What are exoplanets?
-3. [Data wrangling and processing](#Data Wrangling and Processing)
-4. [abcd](#abcd)
+2. [What are exoplanets?](#What are Exoplanets?)
+3. [Data Challenges](#Data Challenges)
+4. [Methodology](#Methodology)
+    [4.1 Data Wrangling and Processing](#4_1 Data Wrangling and Processing)
+    [4.2 Data Imputation](#4_2 Data Imputation)
+    [4.3 Clustering](#4_3 Clustering)
+    [4.4 Dimensionality Reduction](#4_4 Dimensionality Reduction)
+    [4.5 Data Interpretation](#4_5 Data Interpretation)
+5. [Major Results and Interpretation](#5 Major Results and Interpretation)
+6. [Future work](#6Future work)
+7. [Tools Used](#7Tools Used)
 
 1. ### <a id="Unsupervised Learning">Unsupervised Learning</a>
 * Very powerful technique for exploratory data analysis (EDA)
+* There are many applications for unsupervised learning
+    * Marketing
+    * Genetics
+    * Politics
+    * Many others
 
-###What are exoplanets?
+2. ### <a href="What are Exoplanets?">What are exoplanets?</a>
 * Exoplanets are planets that we have discovered outside of our solar system
 * There is a LOT of data available on exoplanets, for instance:
   * http://exoplanetarchive.ipac.caltech.edu/index.html
@@ -18,7 +31,10 @@
 
 ![Exoplanet](images/opening-background.jpg =100x120)
 
-3. <a name="Data Wrangling and Processing">###Data wrangling and processing</a>
+3. ### <a name="Methodology">Methodology</a>
+
+4. ### <a href="Data Challenges">Data Challenges</a>
+
 
 ###What can we quickly discover about exoplanets using out-of-the box tools in Python?
 * What are some common characteristics of exoplanets?
@@ -35,5 +51,3 @@
 
 ![python logo](images/python-logo.png) ![skl_logo](images/skl_logo.png) ![pandas_logo](images/pandas_logo.png)
 ![numpy_logo](images/numpy_logo.jpg) ![matplotlib_logo](images/matplotlib_logo.png)
-
-<a id="abcd">test</a>
