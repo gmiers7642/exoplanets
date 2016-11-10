@@ -71,7 +71,7 @@ The main steps of this analysis are:
 7. Interpretation
 
 #### 4.1 <a id="#4_1 Data Downloading and Preparation">Data Downloading and Preparation</a>
-The data is available <a href="">here</a>.  <a href="https://github.com/gmiers7642/exoplanets/blob/master/src/prep_csv_data.bash">This</a> script can be used to prepare the data, make sure that it is in the 'data' directory.  This strips off all of the documentation columns, and prepares the data to be used by the other processing scripts.
+The data is available <a href="">here</a>.  <a href="https://github.com/gmiers7642/exoplanets/blob/master/src/prep_csv_data.bash">This script</a> can be used to prepare the data, make sure that it is in the 'data' directory.  This strips off all of the documentation columns, and prepares the data to be used by the other processing scripts.
 
 #### 4.2 <a id="#4_2 Imputation of Missing Data">Imputation of Missing Data</a>
 Method:
@@ -101,7 +101,7 @@ Caveats:
         * This is a plot of several features used here plotted as colors on a scatterplot of <> which shows three distinct clusters. <div>
         <img src="images/3_clusters.png" alt="alt text" align="bottom">
         * These structures could easily be investigated using further cluster analysis.
-    * Proper imputation of the missing values using either <a href="http://www.litech.org/~wkiri/Papers/wagstaff-kmeans-01.pdf">constraints</a> or regression based modeling to predict the missing values. 
+    * Proper imputation of the missing values using either <a href="http://www.litech.org/~wkiri/Papers/wagstaff-kmeans-01.pdf">constraints</a> or regression based modeling to predict the missing values.
     Investigation of the over 4600 exoplanet candidates available in the NASA exoplanet archive.
     * Further analysis of habitable worlds, the list of potentially habitable worlds used here is VERY conservative, it only has 12 planets.  There are many possible others.
     * Performing the same analysis with the planets discovered using radial velocity
