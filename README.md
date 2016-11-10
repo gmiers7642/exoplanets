@@ -72,7 +72,10 @@ Code documentation can be found <a href="https://github.com/gmiers7642/exoplanet
         * This is a plot of several features used here plotted as colors on a scatterplot of <> which shows three distinct clusters. <div>
         <img src="images/3_clusters.png" alt="alt text" align="bottom">
         * These structures could easily be investigated using further cluster analysis.
+    * Investigation of the over 4600 exoplanet candidates available in the NASA exoplanet archive.
+    * Further analysis of habitable worlds, the list of potentially habitable worlds used here is VERY conservative, it only has 12 planets.  There are many possible others.
     * Performing the same analysis with the planets discovered using radial velocity
+    * There is much more that can be done with this data, especially considering that the database continues to grow.
 
 <hr>
 
