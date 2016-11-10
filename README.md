@@ -1,4 +1,4 @@
-<img align="right" src="images/opening-background.png">
+<img align="right" style="float: right;" src="images/opening-background.png">
 
 ## Outline
 1. [Unsupervised Learning](#1Unsupervised Learning)
