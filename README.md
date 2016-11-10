@@ -25,18 +25,30 @@
     * Many others
 * Here, unsupervised learning has been used to detect interesting structure in exoplanet data available from the <a href="http://exoplanetarchive.ipac.caltech.edu/">NASA exoplanet archive,</a>
 
+<hr>
+
 ### 2. <a href="2Exoplanets">What are exoplanets</a>
 * Exoplanets are planets that we have discovered outside of our solar system
 * There is a LOT of data available on exoplanets, for instance:
   * http://exoplanetarchive.ipac.caltech.edu/index.html
 
+<hr>
+
 ### 3. <a href="3Data Challenges">Data Challenges</a>
+
+<hr>
 
 ### 4. <a name="4Methodology">Methodology</a>
 
+<hr>
+
 ### 5. <a name="5Major Results and Interpretation">Major Results and Interpretation</a>
 
+<hr>
+
 ### 6. <a name="6Future work">Future work</a>
+
+<hr>
 
 ### 7. <a name="7Tools Used">Tools Used</a>
 * ScikitLearn KMeans clustering
