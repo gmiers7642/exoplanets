@@ -14,7 +14,7 @@
 6. [Future work](#6Future work)
 7. [Tools Used](#7Tools Used)
 
-### 1. <a id="1Unsupervised Learning)">Unsupervised Learning</a>
+### 1. <a id="1Unsupervised Learning">Unsupervised Learning</a>
 * Very powerful technique for exploratory data analysis (EDA)
 * There are many applications for unsupervised learning
     * Marketing
