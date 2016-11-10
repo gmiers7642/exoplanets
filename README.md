@@ -79,7 +79,12 @@ Method:
 Caveats:
 * There are many possible ways to impute the missing data, this was the one that was feasible to implement over the course of a two-week project.  
 
+Chart showing missing data percentages:
+<img src="images/3_clusters.png" alt="alt text" align="bottom">
+
 #### 4.3 <a id="#4_3 Automatic Feature Selection">Automatic Feature Selection</a>
+A singular value decomposition is performed to determine the features that should be used for clustering.  For the transiting planets, the top 11 were chosen.
+
 
 #### 4.4 <a id="#4_4 Creation of Clusters">Creation of Clusters</a>
 
