@@ -33,8 +33,7 @@
   * http://exoplanetarchive.ipac.caltech.edu/index.html
  * What can we quickly discover about exoplanets using out-of-the box tools in Python?
     * What are some common characteristics of exoplanets?
-    * Where are they in relation to the Earth and Sun?
-    * How similar are they to the Earth and Sun?
+    * How do they compare to the Earth and Sun?
     * What are Habitable planets, and how do they compare to the Earth and Sun?
 
 <hr>
