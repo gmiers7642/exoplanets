@@ -31,7 +31,7 @@
 * Exoplanets are planets that we have discovered outside of our solar system
 * There is a LOT of data available on exoplanets, for instance:
   * http://exoplanetarchive.ipac.caltech.edu/index.html
- * What can we quickly discover about exoplanets using out-of-the box tools in Python?
+* What can we quickly discover about exoplanets using out-of-the box tools in Python?
     * What are some common characteristics of exoplanets?
     * How do they compare to the Earth and Sun?
     * What are Habitable planets, and how do they compare to the Earth and Sun?
