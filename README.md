@@ -85,7 +85,9 @@ Chart showing missing data percentages:
 #### 4.3 <a id="#4_3 Automatic Feature Selection">Automatic Feature Selection</a>
 A singular value decomposition is performed to determine the features that should be used for clustering.  For the transiting planets, the top 11 were chosen by pulling the maximum from each column in the 'vt' matrix from the result of the singular value decomposition.
 
-Chart showing the most relevant feature for the transit data set:
+The most relevant features are:
+<img src="images/most_relevant_features.png" alt="alt text" align="bottom">
+
 
 
 #### 4.4 <a id="#4_4 Creation of Clusters">Creation of Clusters</a>
