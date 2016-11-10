@@ -103,6 +103,16 @@ The most relevant features are:
 <hr>
 
 ### 5. <a id="5Major Results and Interpretation">Major Results and Interpretation</a>
+* All of the data interpretations here are based on the planets discovered by the transit method.  These were discovered by the Kepler satellite.
+
+<img src="images/Kepler.jpg" alt="alt text" align="bottom">
+
+* Comparison of three planet groups
+    * Groups 1 and 2 are very similar, the differ significantly only in the major axis of their orbits.  Many of these are so called "Ice giants" that are similar in many respects to Uranus and Neptune.
+    * Group 3 is in many way a lot more interesting.  These are very large planets (some larger than Jupiter) that orbit very quickly around their stars.  They are so close in some cases that their atmospheres are being boiled off by their host stars.
+    * The Earth is much smaller than most of the planets that we have discovered to date.  It also has a much larger orbit than many of the exoplanets.
+* Inherent biases in the data
+    * All of the data in the
 
 <hr>
 
