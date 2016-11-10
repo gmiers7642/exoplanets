@@ -1,6 +1,6 @@
 <img src="images/opening-background.png" alt="alt text" align="middle">
 
-## Outline
+# Outline
 1. [Unsupervised Learning](#1Unsupervised Learning)
 2. [Exoplanets](#2Exoplanets)
 3. [Data Challenges](#3Data Challenges)
@@ -13,6 +13,8 @@
 5. [Major Results and Interpretation](#5 Major Results and Interpretation)
 6. [Future work](#6Future work)
 7. [Tools Used](#7Tools Used)
+
+<hr>
 
 ### 1. <a id="1Unsupervised Learning">Unsupervised Learning</a>
 * Very powerful technique for exploratory data analysis (EDA)
