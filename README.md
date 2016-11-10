@@ -13,7 +13,6 @@ Code documentation can be found <a href="https://github.com/gmiers7642/exoplanet
     * [4.4 Creation of Clusters](#4_4 Creation of Clusters)
     * [4.5 Dimensionality Reduction](#4_5 Dimensionality Reduction)
     * [4.6 Visualization](#4_6 Visualization)
-    * [4.7 Interpretation](#4_7 Interpretation)
 5. [Major Results and Interpretation](#5 Major Results and Interpretation)
 6. [Future work](#6Future work)
 7. [Tools Used](#7Tools Used)
@@ -82,21 +81,24 @@ Caveats:
 Chart showing missing data percentages:
 <img src="images/Percent_missing.png" alt="alt text" align="bottom">
 
+(Feature documentation to be added)
+
 #### 4.3 <a id="#4_3 Automatic Feature Selection">Automatic Feature Selection</a>
 A singular value decomposition is performed to determine the features that should be used for clustering.  For the transiting planets, the top 11 were chosen by pulling the maximum from each column in the 'vt' matrix from the result of the singular value decomposition.
 
 The most relevant features are:
 <img src="images/most_relevant_features.png" alt="alt text" align="bottom">
 
-
+(Feature documentation to be added)
 
 #### 4.4 <a id="#4_4 Creation of Clusters">Creation of Clusters</a>
+* Clusters were created using agglomerative clustering, using euclidean distance and Ward linkage.
+* Three clusters were chosen since the principal component analysis clearly showed 3 clusters present in this treatment of the data.
+* More on this will be shown in the next section.
 
 #### 4.5 <a id="#4_5 Dimensionality Reduction">Dimensionality Reduction</a>
 
 #### 4.6 <a id="#4_6 Visualization">Visualization</a>
-
-#### 4.7 <a id="#4_7 Interpretation">Interpretation</a>
 
 <hr>
 

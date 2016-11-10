@@ -8,5 +8,6 @@
 4. [Plotting](#4Plotting)
 5. [Current Issues](#5Current Issues)
     * The <a href="https://github.com/gmiers7642/exoplanets/blob/master/src/prep_csv_data.bash">data preparation script</a> needs to be fixed for use with a local repository.
+    * Add feature documentation
 
 <hr>
