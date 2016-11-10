@@ -51,6 +51,10 @@ Code documentation can be found <a href="https://github.com/gmiers7642/exoplanet
     * For this analysis, logarithms were applied to all of the features
         * This reveals far more structure in the data
         * However, it can make interpretation more difficult
+* There are <a href="https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets">many methods</a> by which exoplanets are discovered, the two most common two are:
+    * Transit
+    * Radial Velocity
+* At this time, this project considers only the transiting planets, since they represent the bulk of the data,
 
 <hr>
 
@@ -63,6 +67,12 @@ Code documentation can be found <a href="https://github.com/gmiers7642/exoplanet
 <hr>
 
 ### 6. <a id="6Future work">Future work</a>
+* There is a lot more work to be done here.
+    * There is a lot of interesting structure present in the data that is still left to be explored.  
+        * This is a plot of several features used here plotted as colors on a scatterplot of <> which shows three distinct clusters.
+        <img src="images/3_clusters.png" alt="alt text" align="middle">
+        * These structures could easily be investigated using further cluster analysis.
+    * Performing the same analysis with the planets discovered using radial velocity
 
 <hr>
 
