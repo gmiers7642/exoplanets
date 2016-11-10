@@ -2,7 +2,7 @@
 
 ## Outline
 1. [Unsupervised Learning](#1Unsupervised Learning)
-2. [What are exoplanets?](#2What are Exoplanets?)
+2. [Exoplanets](#2Exoplanets)
 3. [Data Challenges](#3Data Challenges)
 4. [Methodology](#4Methodology)
     [4.1 Data Wrangling and Processing](#4_1 Data Wrangling and Processing)
@@ -21,8 +21,9 @@
     * Genetics
     * Politics
     * Many others
+* Here, unsupervised learning has been used to detect interesting structure in exoplanet data available from the <a href="http://exoplanetarchive.ipac.caltech.edu/">NASA exoplanet archive,</a>
 
-### 2. <a href="2What are Exoplanets?">What are exoplanets?</a>
+### 2. <a href="2Exoplanets">What are exoplanets</a>
 * Exoplanets are planets that we have discovered outside of our solar system
 * There is a LOT of data available on exoplanets, for instance:
   * http://exoplanetarchive.ipac.caltech.edu/index.html
@@ -36,7 +37,11 @@
 ### 6. <a name="6Future work">Future work</a>
 
 ### 7. <a name="7Tools Used">Tools Used</a>
-
+* ScikitLearn KMeans clustering
+* Numpy Singular Value decomposition (SVD)
+* ScikitLearn Agglomerative clustering
+* Matplotlib for plotting and interpretation of data
+* Pandas and Numpy for quick and convenient data manipulation
 
 ###What can we quickly discover about exoplanets using out-of-the box tools in Python?
 * What are some common characteristics of exoplanets?
@@ -44,12 +49,6 @@
 * How similar are they to the Earth and Sun?
 * What are Habitable planets, and how do they compare to the Earth and Sun?
 
-### We will use:
-* ScikitLearn KMeans clustering
-* Numpy Singular Value decomposition (SVD)
-* ScikitLearn Agglomerative clustering
-* Matplotlib for plotting and interpretation of data
-* Pandas and Numpy for quick and convenient data manipulation
 
 ![python logo](images/python-logo.png) ![skl_logo](images/skl_logo.png) ![pandas_logo](images/pandas_logo.png)
 ![numpy_logo](images/numpy_logo.jpg) ![matplotlib_logo](images/matplotlib_logo.png)
