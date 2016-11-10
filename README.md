@@ -1,5 +1,7 @@
 <img src="images/opening-background.png" alt="alt text" align="middle">
 
+Code documentation can be found <a href="https://github.com/gmiers7642/exoplanets/blob/master/Code_Documentation.md">here.</a>
+
 # Outline
 1. [Unsupervised Learning](#1Unsupervised Learning)
 2. [Exoplanets](#2Exoplanets)
