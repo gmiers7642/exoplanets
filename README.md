@@ -1,4 +1,5 @@
-<img src="images/opening-background.png" alt="alt text" align="middle">
+<img src="images/opening-background.png" alt="opening-background.png" style="float:right">
+<br>
 
 Code documentation can be found <a href="https://github.com/gmiers7642/exoplanets/blob/master/Code_Documentation.md">here.</a>
 
