@@ -35,7 +35,7 @@ Code documentation can be found <a href="https://github.com/gmiers7642/exoplanet
 * There is a LOT of data available on exoplanets, for instance:
   * http://exoplanetarchive.ipac.caltech.edu/index.html
   * ,a href="https://www.reddit.com/r/space/comments/5ck1rl/direct_image_of_planets_circling_another_star/">This</a> was discovered on 11/12/2016.  WOWW!!!!!
-  <img src="images/3_new_planets.jpg" alt="alt text" align="left">
+  <img src="images/3_new_planets.jpg" alt="alt text" align="bottom">
 
 * What can we quickly discover about exoplanets using out-of-the box tools in Python?
     * What are some common characteristics of exoplanets?
