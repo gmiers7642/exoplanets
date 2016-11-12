@@ -100,6 +100,10 @@ The most relevant features are:
 * More on this will be shown in the next section.
 
 #### 4.5 <a id="#4_5 Dimensionality Reduction">Dimensionality Reduction</a>
+* SVD was used to reduce the original 21 selected features down to two principal components which could then be plotted.
+The labels for the three groups found by agglomerative clustering were then plotted on top of this data, as shown below:
+<img src="images/pc_labeled_scatterplot.png" alt="alt text" align="bottom">
+
 
 #### 4.6 <a id="#4_6 Visualization">Visualization</a>
 
