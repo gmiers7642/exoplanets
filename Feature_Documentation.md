@@ -4,10 +4,10 @@ More comprehensive documentation for the features can be found on the NASA Exopl
 
 <hr>
 
-1. 'pl_orbper' - Planet orbital period, in days
-2. 'pl_orbsmax' - Major axis of the planet's orbit
+1. <span style="color:blue">'pl_orbper'</span> - Planet orbital period, in days
+2. <span style="color:red">'pl_orbsmax'</span> - Major axis of the planet's orbit
     * This is one size measurement for the planet's orbit
-3. 'pl_orbeccen' - The eccentricity of the planet's orbit
+3. <span style="color:red">'pl_orbeccen'</span> - The eccentricity of the planet's orbit
     * This is 0 if the planet has a circular orbit, and becomes larger for planets with a more elliptical orbit.
-4. 'pl_orbincl' - Angle of inclination of the planet's orbit.
-5. 'pl_bmassj' - MAxx of the planet, measured as a fraction of Jupiter's mass.
+4. <span style="color:red">'pl_orbincl'</span> - Angle of inclination of the planet's orbit.
+5. <span style="color:red">'pl_bmassj'</span> - Mass of the planet, measured as a fraction of Jupiter's mass.
