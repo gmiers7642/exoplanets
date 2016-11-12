@@ -27,7 +27,7 @@ Code documentation can be found <a href="https://github.com/gmiers7642/exoplanet
     * Genetics
     * Politics
     * Many others
-* Here, unsupervised learning has been used to detect interesting structure in exoplanet data available from the <a href="http://exoplanetarchive.ipac.caltech.edu/">NASA exoplanet archive,</a>
+* Here, unsupervised learning has been used to detect interesting structure in exoplanet data available from the <a href="http://exoplanetarchive.ipac.caltech.edu/">NASA exoplanet archive.</a>
 
 <hr>
 
@@ -35,9 +35,10 @@ Code documentation can be found <a href="https://github.com/gmiers7642/exoplanet
 * Exoplanets are planets that we have discovered outside of our solar system
 * There is a LOT of data available on exoplanets, for instance:
   * http://exoplanetarchive.ipac.caltech.edu/index.html
-  * ,a href="https://www.reddit.com/r/space/comments/5ck1rl/direct_image_of_planets_circling_another_star/">This</a> was discovered on 11/12/2016.  WOWW!!!!!
+  * <a href="https://www.reddit.com/r/space/comments/5ck1rl/direct_image_of_planets_circling_another_star/">This</a> was discovered on 11/12/2016.  WOWW!!!!!
   <br>
   <img src="images/3_new_planets.jpg" alt="alt text" style="float:right>
+  <br>
 
 * What can we quickly discover about exoplanets using out-of-the box tools in Python?
     * What are some common characteristics of exoplanets?
@@ -84,15 +85,18 @@ Caveats:
 * There are many possible ways to impute the missing data, this was the one that was feasible to implement over the course of a two-week project.  
 
 Chart showing missing data percentages:
-<img src="images/Percent_missing.png" alt="alt text" align="bottom">
-
+<br>
+<img src="images/Percent_missing.png" alt="alt text" style="float:right>
+<br>
 (Feature documentation to be added)
 
 #### 4.3 <a id="#4_3 Automatic Feature Selection">Automatic Feature Selection</a>
 A singular value decomposition is performed to determine the features that should be used for clustering.  For the transiting planets, the top 11 were chosen by pulling the maximum from each column in the 'vt' matrix from the result of the singular value decomposition.
 
 The most relevant features are:
-<img src="images/most_relevant_features.png" alt="alt text" align="bottom">
+<br>
+<img src="images/most_relevant_features.png" alt="alt text" style="float:right>
+<br>
 
 (Feature documentation to be added)
 
