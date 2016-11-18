@@ -35,10 +35,10 @@ Code documentation can be found <a href="https://github.com/gmiers7642/exoplanet
 * Exoplanets are planets that we have discovered outside of our solar system
 * There is a LOT of data available on exoplanets, for instance:
   * http://exoplanetarchive.ipac.caltech.edu/index.html
-  * <a> href="https://www.reddit.com/r/space/comments/5ck1rl/direct_image_of_planets_circling_another_star/">This</a> was discovered on 11/12/2016.  WOWW!!!!!
+  * <a href="https://www.reddit.com/r/space/comments/5ck1rl/direct_image_of_planets_circling_another_star/">This</a> was discovered on 11/12/2016.  WOWW!!!!!
 
   <br>
-  <img src="images/3_new_planets.jpg" alt="alt text" style="float:right>
+  <img src="images/3_new_planets.jpg" alt="alt text" style="float:right">
   <br>
 
 * What can we quickly discover about exoplanets using out-of-the box tools in Python?
