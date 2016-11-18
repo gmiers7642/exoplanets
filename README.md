@@ -55,6 +55,7 @@ Code documentation can be found <a href="https://github.com/gmiers7642/exoplanet
     * 2/3 of these are error bars associated with the physical measurements contained in the data
 * Much missing data
     * Imputation required
+    * Needed to select the most important attributes, and make sure that they had enough non-missing data for the clustering to be significant.
 * Data is large scale, so transformations are required
     * For this analysis, logarithms were applied to all of the features
         * This reveals far more structure in the data
@@ -87,7 +88,7 @@ Caveats:
 
 Chart showing missing data percentages:
 <br>
-<img src="images/Percent_missing.png" alt="alt text" style="float:right>
+<img src="images/Percent_missing.png" alt="alt text" style="float:right">
 <br>
 (Feature documentation to be added)
 
@@ -96,7 +97,7 @@ A singular value decomposition is performed to determine the features that shoul
 
 The most relevant features are:
 <br>
-<img src="images/most_relevant_features.png" alt="alt text" style="float:right>
+<img src="images/most_relevant_features.png" alt="alt text" style="float:right">
 <br>
 
 (Feature documentation to be added)
@@ -109,7 +110,7 @@ The most relevant features are:
 #### 4.5 <a id="#4_5 Dimensionality Reduction">Dimensionality Reduction</a>
 * SVD was used to reduce the original 21 selected features down to two principal components which could then be plotted.
 The labels for the three groups found by agglomerative clustering were then plotted on top of this data, as shown below:
-<img src="images/pc_labeled_scatterplot.png" alt="alt text" align="bottom">
+<img src="images/pc_labeled_scatterplot.png" alt="alt text" align="float:right">
 
 
 #### 4.6 <a id="#4_6 Visualization">Visualization</a>
